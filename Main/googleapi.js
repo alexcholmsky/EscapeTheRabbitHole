@@ -12,8 +12,10 @@ while(count < 11){
         for (var i = 0; i < response.items.length; i++) {
             var item = response.items[i];
             // in production code, item.htmlTitle should have the HTML entities escaped.
-            document.getElementById("content").innerHTML += item.title + "<br>"
-            document.getElementById("content").innerHTML += item.link + "<br><br>";
+            console.log(item.title + "<br>");
+            console.log(item.link + "<br><br>");
+            document.getElementById("content").innerHTML += item.title + "<br>";
+            document.getElementById("content").innerHTML += "<a href=" + item.link + "> "+ item.link +" </a>" + "<br><br>";
         }
     }
 
