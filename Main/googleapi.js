@@ -6,7 +6,7 @@ const sources = ['www.bloomberg.com','www.nbcnews.com','www.cnn.com','www.thegua
 const link = ['#bloomberg','#nbc','#cnn','#theguardian','#nytimes','#theamericanconservative','#washingtontimes','#foxnews','#breitbart','#nationalreview'];
 
 while(count < 11){
-    var fullSrc = "https://www.googleapis.com/customsearch/v1/siterestrict?siteSearch="+sources[count]+"&siteSearchFilter=i&key=AIzaSyDb54oEYNtY2zKGeyC7cqJGBP7t1VBCrk4&cx=6adbb15b85973bdf7&q="+search+"&callback=hndlr&num=10"
+    var fullSrc = "https://www.googleapis.com/customsearch/v1?siteSearch="+sources[count]+"&siteSearchFilter=i&key=AIzaSyDb54oEYNtY2zKGeyC7cqJGBP7t1VBCrk4&cx=6adbb15b85973bdf7&q="+search+"&callback=hndlr&num=1"
     $(link[count]).attr("src",fullSrc);
 
     function hndlr(response) {
