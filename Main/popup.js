@@ -6,10 +6,12 @@ chrome.storage.sync.get("color", ({ color }) => {
 });
 
 function alertTest() {
-  text = document.getElementsByClassName('kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q');
-  console.log(text[0].innerText)
+  postsdata = document.getElementsByClassName('kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q');
+  for (let i=0; i < postsdata.length; i++) {
+    const button = document.createElement("button");
+    postsdata[i].appendChild(button);
+  }
 }
-
   
   // The body of this function will be executed as a content script inside the
   // current page
@@ -19,11 +21,11 @@ function alertTest() {
     });
   }
 
-  // function getSelectionText() {
+function getSelectionText() {
   var text = "";
   if (window.getSelection) {
       text = window.getSelection().toString();
-      console.log(text);
+      alert(text);
   } 
 
 // When the button is clicked, inject setPageBackgroundColor into current page
@@ -32,6 +34,6 @@ changeColor.addEventListener("click", async () => {
 
   chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    function: alertTest,
+    function: getSelectionText,
   });
-});
+})}

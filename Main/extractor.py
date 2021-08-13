@@ -6,8 +6,22 @@ from sentence_transformers import SentenceTransformer
 import json
 
 text = """
-         The Battle of Blenheim was fought on 13 August 1704 during the War of the Spanish Succession. The French were seeking to knock Austria out of the war by seizing its capital, Vienna. An army of the reconstituted Grand Alliance, led by the Duke of Marlborough, marched south from the Dutch Republic to the Danube.
-      """
+         Supervised learning is the machine learning task of 
+         learning a function that maps an input to an output based 
+         on example input-output pairs.[1] It infers a function 
+         from labeled training data consisting of a set of 
+         training examples.[2] In supervised learning, each 
+         example is a pair consisting of an input object 
+         (typically a vector) and a desired output value (also 
+         called the supervisory signal). A supervised learning 
+         algorithm analyzes the training data and produces an 
+         inferred function, which can be used for mapping new 
+         examples. An optimal scenario will allow for the algorithm 
+         to correctly determine the class labels for unseen 
+         instances. This requires the learning algorithm to  
+         generalize from the training data to unseen situations 
+         in a 'reasonable' way (see inductive bias).
+        """
 # n_gram = keyword where n_gram_range = (lower boundary of number of words, upper boundary)
 n_gram_range = (2, 4)
 
@@ -53,7 +67,7 @@ candidate_embeddings = model.encode(candidates)
 
 # Use cosine similarity between text and candidate to determine proximity, and therefore top candidates
 # Generate top 5 keywords
-top_k = 5
+top_k = 1
 distances = cosine_similarity(text_embedding, candidate_embeddings)
 keywords = [candidates[index] for index in distances.argsort()[0][-top_k:]]
 
@@ -63,5 +77,5 @@ keyword = {
     'keywords':keywords,
 }
 
-with open('Main/export.js', 'w') as out_file:
-  out_file.write('var export = %s;' % json.dumps(keyword))
+with open('Main/keyword.js', 'w') as out_file:
+  out_file.write('var keyword = %s;' % json.dumps(keyword))
