@@ -2,14 +2,22 @@
     "name": "Getting Started Example",
     "description": "Build an Extension!",
     "version": "1.0",
-    "manifest_version": 3,
+    "manifest_version": 2,
     "browser_action": {
-        "default_popup": "escapetherabbithole.html",
-        "default_icon": "logo.png"
-        
-    }
-    
+        "default_popup": "escapetherabbithole.html"
+    },
+    "permissions": ["activeTab"],
+    "commands": {
+        "_execute_action": {
+          "suggested_key": {
+            "default": "Ctrl+Shift+F",
+            "mac": "MacCtrl+Shift+F"
+          },
+          "description": "Opens hello.html"
+        }
+      }
 }
+
 
 
 
