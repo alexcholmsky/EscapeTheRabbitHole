@@ -50,21 +50,25 @@ const sendData = async (text) => {
 const processSelected = async () => {
   // 1) get selected text
   let test = getSelectionText();
+  let test2 = "The ring ouzel (Turdus torquatus) is a medium-sized thrush, breeding mainly in Europe. Males are mostly black with a white crescent across the breast, females are browner and duller than males, and young birds may lack chest markings."
   console.log(test);
-  let text = 'The Inter­govern­mental Panel on Climate Change releases the first part of its Sixth Assessment Report on the state of knowledge of climate change and its effects.';
-  
+  alert(test);
+
   // 2) get keywords for the text
-  let res = await sendData(text);
+  let res = await sendData(test2);
   console.log(res.keywords[0]);
+  alert(res);
 
   // 3) call function to get articles (googleapi.js)
   const word = res.keywords[0];
   let results = googleapi(word);
   console.log(results);
+  alert(results);
 
   // 4) display articles to UI
   let articles = hndlr(results)
   console.log(articles);
+  alert(articles);
 }
 
 button.addEventListener('click', () => {
