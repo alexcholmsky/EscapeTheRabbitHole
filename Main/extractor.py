@@ -30,7 +30,8 @@ stop_words = "english"
 
 # Extract candidate words/phrases
 # CountVectorizer is a sklearn function that converts words to vectors as per the Bag of Words analogy (frequency of words in text)
-count = CountVectorizer(ngram_range=n_gram_range, stop_words=stop_words).fit([text])
+count = CountVectorizer(ngram_range=n_gram_range,
+                        stop_words=stop_words).fit([text])
 all_candidates = count.get_feature_names()
 
 # FINDING NOUNS
@@ -55,7 +56,8 @@ for token in doc:
 all_nouns = nouns.union(noun_phrases)
 
 # Filter for candidate that are in both all_nouns and all_candidates, add to list candidates
-candidates = list(filter(lambda candidate: candidate in all_nouns, all_candidates))
+candidates = list(
+    filter(lambda candidate: candidate in all_nouns, all_candidates))
 
 # CALCULATING BEST KEYWORDS
 

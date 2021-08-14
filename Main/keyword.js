@@ -1,1 +1,0 @@
-var keyword = {"keywords": ["chest markings"]};

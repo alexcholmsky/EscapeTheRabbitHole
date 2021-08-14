@@ -9,12 +9,14 @@ api = Api(app)
 cors = CORS()
 cors.init_app(app)
 
+
 class test(Resource):
     def post(self):
         return {"data": extractor.keywords}
 
     def get(self):
         return {"data": extractor.keywords}
+
 
 api.add_resource(test, "/test")
 
