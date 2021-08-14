@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from flask_restful import Api, Resource
 from flask_cors import CORS
 import extractor
@@ -10,13 +10,35 @@ cors = CORS()
 cors.init_app(app)
 
 
+@app.route('/endpoint', methods=['POST', 'GET'])
+def get_names():
+    if request.method == 'POST':
+        names = request.get_json()
+
+    if request.method == 'GET':
+        names = request.get_json()
+    return {"data": names}
+
+# @app.route('/json_example', methods=['POST','GET'])
+# def json_example():
+#     req_data = request.get_json()
+#     return {"name": req_data}
+
+
+@app.route("/")
+def hello():
+    return "Hello, World!"
+
+
 class test(Resource):
     def post(self):
-        return {"data": extractor.keywords}
+        payload = request.get_json(force=True)
 
-    def get(self):
-        return {"data": extractor.keywords}
+        # THIS IS RECEIVING TEXT PROPERLY
+        text = payload.get("text", None)
+        keywords = extractor.get_keywords(text)
 
+        return {"text": text, "keywords": keywords}
 
 api.add_resource(test, "/test")
 
