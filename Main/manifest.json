@@ -6,7 +6,9 @@
     "action": {
         "default_popup": "escapetherabbithole.html"
     },
-
+    "content_security_policy": {
+      "extension_pages": "script-src 'self' https://www.googleapis.com/;"
+    },
     "permissions": ["activeTab"],
     "commands": {
         "_execute_action": {
