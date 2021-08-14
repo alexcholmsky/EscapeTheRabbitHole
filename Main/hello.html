@@ -2,9 +2,31 @@
 <html>
   <head>
     <link rel="stylesheet" href="button.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
   </head>
   <body>
-    <button id="doneHighlightButton"></button>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="https://lh3.googleusercontent.com/proxy/8fLDcDj_3Lpr1qwtOzn9MbVOi2eIT4xCu4-tsZSQscM6hJIbMQUwpq3VeYWPSOxC9RhZX6nsEYeaoiJHL3RzGkYJu4f8kUCMmg7Q9MdIwahDUA" alt="" width="30" height="24">
+        </a>
+        <button id="exit_button" type="button" onclick="self.close()">X
+      </button>
+      </div>
+    </nav>
+    
+      <h1> Escape the Rabbit Hole </h1>
+    </div>
+    <div id='instructions'>
+      <h2> Instructions <h2>
+      <p> 1. Highlight the text of the article you would like to cross-reference with reputable sources </p>
+      <p> 2. Reopen the web extension and click the "Escape the Rabbit Hole" button </p>
+      <p> 3. Voila! You should see a variety of sources. </p>
+    </div>
+    <div id='articles'>
+    </div>
+    <button id="doneHighlightButton" class="">Escape the Rabbit Hole</button>
     <script src="popup.js"></script>
     
   </body>

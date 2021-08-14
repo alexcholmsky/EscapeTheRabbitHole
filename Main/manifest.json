@@ -2,8 +2,8 @@
     "name": "Getting Started Example",
     "description": "Build an Extension!",
     "version": "1.0",
-    "manifest_version": 2,
-    "browser_action": {
+    "manifest_version": 3,
+    "action": {
         "default_popup": "escapetherabbithole.html"
     },
     "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",

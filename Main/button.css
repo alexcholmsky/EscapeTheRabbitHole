@@ -11,3 +11,18 @@ button {
     box-shadow: 0 0 0 2px white,
                 0 0 0 4px black;
   }
+
+
+  #exit_button{
+    border: none;
+    align-items: right;
+
+  }
+
+  body {
+    min-width: 350px;
+    max-width: 100%;
+    min-height: 500px;
+    max-height: 100%;
+}
+

@@ -7,16 +7,16 @@ function getSelectionText() {
     alert(text);
     return text;
   }
-
-  doneHighlightButton.addEventListener("click", async () => {
-    let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-
-    chrome.scripting.executeScript({
-      target: { tabId: tab.id },
-      function: getSelectionText,
-    });
-  })
 }
+
+function hidingInstructions() {
+  var inst = document.getElementById("instructions");
+  if (inst.style.display === "block") {
+    inst.style.display = "none";
+  }
+}
+
+let button = document.getElementById('testing')
 
 const sendData = async (text) => {
   try {
@@ -49,39 +49,24 @@ const sendData = async (text) => {
 
 const processSelected = async () => {
   // 1) get selected text
-  let text = getSelectionText();
+  let test = getSelectionText();
+  console.log(test);
+  let text = 'The Inter­govern­mental Panel on Climate Change releases the first part of its Sixth Assessment Report on the state of knowledge of climate change and its effects.';
   
   // 2) get keywords for the text
   let res = await sendData(text);
+  console.log(res.keywords[0]);
 
   // 3) call function to get articles (googleapi.js)
-  let articles = "someFunction(res)";
+  const word = res.keywords[0];
+  let results = googleapi(word);
+  console.log(results);
 
   // 4) display articles to UI
-  // displayArticles(articles);
+  let articles = hndlr(results)
+  console.log(articles);
 }
 
-
-// // Initialize button with user's preferred color
-// let changeColor = document.getElementById("changeColor");
-
-// chrome.storage.sync.get("color", ({ color }) => {
-//   changeColor.style.backgroundColor = color;
-// });
-
-// function alertTest() {
-//   postsdata = document.getElementsByClassName('kvgmc6g5 cxmmr5t8 oygrvhab hcukyx3x c1et5uql ii04i59q');
-//   for (let i = 0; i < postsdata.length; i++) {
-//     const button = document.createElement("button");
-//     postsdata[i].appendChild(button);
-//   }
-// }
-
-// // The body of this function will be executed as a content script inside the
-// // current page
-// function setPageBackgroundColor() {
-//   chrome.storage.sync.get("color", ({ color }) => {
-//     document.body.style.backgroundColor = color;
-//   });
-// }
-
+button.addEventListener('click', () => {
+  processSelected();
+})
