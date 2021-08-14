@@ -72,10 +72,3 @@ distances = cosine_similarity(text_embedding, candidate_embeddings)
 keywords = [candidates[index] for index in distances.argsort()[0][-top_k:]]
 
 print(keywords)
-
-keyword = {
-    'keywords':keywords,
-}
-
-with open('Main/keyword.js', 'w') as out_file:
-  out_file.write('var keyword = %s;' % json.dumps(keyword))
