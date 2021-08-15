@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('../resources/bold.otf');
+}
+
+@font-face {
+font-family: 'kayak';
+src: url('../resources/Kayak Sans Light.otf');
+}
+/*
+* Globals
+*/
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover
+.btn-secondary:focus {
+color: #333;
+text-shadow: none; /* Prevent inheritance from `body` */
+}
+
+/*
+* Base structure
+*/
+
+html{
+scroll-behavior: smooth;
+}
+
+body {
+text-shadow: 0 .02rem .1rem rgba(0, 0, 0, .5);
+}
+
+.cover-container {
+max-width: 100em;
+}
+
+
+/*
+* Header
+*/
+
+#text{
+position: absolute;
+top: 47.5%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'MyWebFont';
+font-size: x-large;
+line-height: 1.6;
+letter-spacing: 1.5px;
+animation: fadelast 3.8s;
+-webkit-animation: fadelast 3.8s;
+-moz-animation: fadelast 3.8s;
+-o-animation: fadelast 3.8s;
+-ms-animation: fadelast 3.8s;
+}
+@keyframes fadelast {
+0% {opacity:0;}
+66% {opacity:0;}
+100% {opacity:1;}
+}
+
+h3{
+font-family: 'MyWebFont';
+margin-top: 3rem;
+letter-spacing: 2.5px;
+animation: fadeIn 2.5s;
+-webkit-animation: fadeIn 2.5s;
+-moz-animation: fadeIn 2.5s;
+-o-animation: fadeIn 2.5s;
+-ms-animation: fadeIn 2.5s;
+}
+@keyframes fadeIn {
+0% {opacity:0;}
+57.5% {opacity:0;}
+100% {opacity:1;}
+}
+
+.first{
+animation: fadeFirst 3s;
+-webkit-animation: fadeFirst 3s;
+-moz-animation: fadeFirst 3s;
+-o-animation: fadeFirst 3s;
+-ms-animation: fadeFirst 3s;
+}
+@keyframes fadeFirst {
+0% {opacity:0;}
+66% {opacity:0;}
+100% {opacity:1;}
+}
+
+.second{
+animation: fadeSecond 3.2s;
+-webkit-animation: fadeSecond 3.2s;
+-moz-animation: fadeSecond 3.2s;
+-o-animation: fadeSecond 3.2s;
+-ms-animation: fadeSecond 3.2s;
+}
+@keyframes fadeSecond {
+0% {opacity:0;}
+66% {opacity:0;}
+100% {opacity:1;}
+}
+
+.third{
+animation: fadeThird 3.4s;
+-webkit-animation: fadeThird 3.4s;
+-moz-animation: fadeThird 3.4s;
+-o-animation: fadeThird 3.4s;
+-ms-animation: fadeThird 3.4s;
+}
+@keyframes fadeThird {
+0% {opacity:0;}
+66% {opacity:0;}
+100% {opacity:1;}
+}
+
+.fourth{
+animation: fadeThird 3.6s;
+-webkit-animation: fadeThird 3.6s;
+-moz-animation: fadeThird 3.6s;
+-o-animation: fadeThird 3.6s;
+-ms-animation: fadeThird 3.6s;
+}
+@keyframes fadeThird {
+0% {opacity:0;}
+66% {opacity:0;}
+100% {opacity:1;}
+}
+
+.nav-masthead .nav-link {
+font-family: 'kayak';
+letter-spacing: 2.5px;
+margin-top: 2rem;
+font-weight: 600;
+color: rgba(0, 0, 0, 1);
+background-color: transparent;
+border-bottom: .185rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+border-bottom-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-masthead .nav-link + .nav-link {
+margin-left: 1rem;
+}
+
+.nav-masthead .active {
+color: #000000;
+border-bottom-color: #000000;
+}
+
+#jump{
+height: 100vh;
+background-color: #63759c;
+}
+
+#arrow{
+transform: translate(-50%, -50%);
+width: 3vw;
+height: 2vw;
+color: black;
+
+animation: arrow 2.25s;
+-webkit-animation: fade 2.25s;
+-moz-animation: fade 2.25s;
+-o-animation: fade 2.25s;
+-ms-animation: fade 2.25s;
+}
+@keyframes fade {
+0% {opacity:0;}
+50% {opacity:0;}
+100% {opacity:1;}
+
+}
+
+.jump {
+  position: absolute;
+  top: 94.5%;
+  left: 50%;
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+0%{
+  transform: translateY(-2.5px);
+}
+50%{
+  transform: translateY(2.5px);
+}
+100%{
+  transform: translateY(-2.5px);
+}
+}
+
+.section{
+  height: 100vh;
+}
+
+
+.section1{
+  height: 100vh;
+  
+}
+
+button.current {
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px black;
+}
+
+
+  #exit_button{
+    border: none;
+    align-items: right;
+
+  }
+
+  body {
+    min-width: 350px;
+    max-width: 100%;
+    min-height: 500px;
+    max-height: 100%;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  padding: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 27.5%;
+}
+
+.center {
+  text-align: center;
+  align-items: center;
+}
+
+.jump {
+  position: absolute;
+  top: 94.5%;
+  left: 50%;
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+0%{
+  transform: translateY(-5px);
+}
+50%{
+  transform: translateY(5px);
+}
+100%{
+  transform: translateY(-5px);
+}
+}
