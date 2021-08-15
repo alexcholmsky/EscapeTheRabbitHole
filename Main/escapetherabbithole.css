@@ -40,6 +40,27 @@ max-width: 100em;
 * Header
 */
 
+#text{
+position: absolute;
+top: 47.5%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: 'MyWebFont';
+font-size: x-large;
+line-height: 1.6;
+letter-spacing: 1.5px;
+animation: fadelast 3.8s;
+-webkit-animation: fadelast 3.8s;
+-moz-animation: fadelast 3.8s;
+-o-animation: fadelast 3.8s;
+-ms-animation: fadelast 3.8s;
+}
+@keyframes fadelast {
+0% {opacity:0;}
+66% {opacity:0;}
+100% {opacity:1;}
+}
+
 h3{
 font-family: 'MyWebFont';
 margin-top: 3rem;
@@ -164,23 +185,30 @@ animation: arrow 2.25s;
 }
 @keyframes arrow{
 0%{
-  transform: translateY(-5px);
+  transform: translateY(-2.5px);
 }
 50%{
-  transform: translateY(5px);
+  transform: translateY(2.5px);
 }
 100%{
-  transform: translateY(-5px);
+  transform: translateY(-2.5px);
 }
 }
 
-button {
-  }
+.section{
+  height: 100vh;
+}
+
+
+.section1{
+  height: 100vh;
   
-  button.current {
-    box-shadow: 0 0 0 2px white,
-                0 0 0 4px black;
-  }
+}
+
+button.current {
+  box-shadow: 0 0 0 2px white,
+              0 0 0 4px black;
+}
 
 
   #exit_button{
@@ -199,14 +227,33 @@ button {
 .icon {
   width: 24px;
   height: 24px;
+  padding: 20px;
 }
 
 textarea {
   width: 100%;
-  height: 25%;
+  height: 27.5%;
 }
 
 .center {
   text-align: center;
   align-items: center;
+}
+
+.jump {
+  position: absolute;
+  top: 94.5%;
+  left: 50%;
+  animation: arrow 2s linear infinite;
+}
+@keyframes arrow{
+0%{
+  transform: translateY(-5px);
+}
+50%{
+  transform: translateY(5px);
+}
+100%{
+  transform: translateY(-5px);
+}
 }
