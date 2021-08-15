@@ -48,4 +48,6 @@ const processSelected = async () => {
   // 4) display articles to UI
   let articles = hndlr(results)
   console.log(articles);
+
+  window.location.href = "results.html";
 }

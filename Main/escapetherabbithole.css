@@ -237,6 +237,20 @@ textarea {
 
 }
 
+.results-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  
+}
+.results-item {
+ height: 20vh;
+ width: 80vw;
+ padding-right: 100px;
+ 
+
+
+}
+
 #rabbit{
   position: absolute;
   top: 77.25%;
@@ -261,5 +275,20 @@ div.a{
 }
 
 #input {
-  height: 10vh;
+  height: 15vh;
+}
+
+#logos{
+  width:10vh;
+  height:100%;
+}
+
+#content {
+  font-size: 17.25px;
+  padding-top: 10px;
+  padding-left: 60px;
+}
+
+#1{
+  height:100vh;
 }
