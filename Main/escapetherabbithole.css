@@ -3,13 +3,14 @@
   src: url('../resources/bold.otf');
 }
 
-@font-face {
-font-family: 'kayak';
-src: url('../resources/Kayak Sans Light.otf');
-}
 /*
 * Globals
 */
+
+body{
+  font-family: 'MyWebFont';
+  letter-spacing: 0.5px;
+}
 
 /* Custom default button */
 .btn-secondary,
@@ -244,9 +245,13 @@ textarea {
 }
 
 div.a{
-  -ms-transform: rotate(20deg); /* IE 9 */
-  transform: rotate(20deg);
-  z-index: -1;
+  position: absolute;
+  top: 140%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  -ms-transform: rotate(90deg); /* IE 9 */
+  transform: rotate(90deg);
+  z-index: -3;
 }
 
 .buttons {
