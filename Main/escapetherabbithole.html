@@ -19,14 +19,14 @@
                 <div>
                     <h3 class="float-md-start mb-0">ESCAPE THE RABBIT HOLE</h3>
                     <nav class="nav nav-masthead justify-content-center float-md-end">
-                        <a class="nav-link active first" aria-current="page" href="/">Home</a>
-                        <a class="nav-link second" href="/tracker">Tracker</a>
-                        <a class="nav-link third" href="/vehicle">Vehicle Info</a>
-                        <a class="nav-link fourth" href="/whatcanido">What Can I Do</a>
+                        <a class="nav-link active first" aria-current="page" href="escapetherabbithole.html">Home</a>
+                        <a class="nav-link second" href="#get-started">Get Started</a>
+                        <a class="nav-link third" href="aboutus.html">About Us</a>
                     </nav>
                 </div>
             </header>
         </div>
+<img id="rabbit" src="images/rabbit_hole.png" alt="LOGO1">
 
 <div class="container">
     <div class="section1">
@@ -39,73 +39,92 @@
         <br>
         Simple. We are stuck in our own echo chambers of information that confirms what we already know. <br>
         We call this "Being Stuck in the Rabbit Hole". And we are here to help you escape. <br>
-        <br>
-        Follow these simple steps to broaden your media diet:<br>
+        
     </h3>
 
     <div class="jump">
-        <a href="#new_section">
+        <a href="#get-started">
             <svg id="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
             <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
             </svg>
         </a>
     </div>
+</div>
+  
+<div class='grid-container' id="get-started">
+        <div class="move">
+            <div class="row grid-item">
+                <div class="col s4">
+                    <div class="center">
+                    <i class="bi bi-pen-fill" style="font-size: 4.1em;"></i>
+                    <br>
+                        <h5>Paste the text of the article <br> The power to form your own informed perspective </h5>
+                    </div>
+                </div>
 
-    <br>
-    <br>
-    </div>
-    
+                <div class="col s4">
+                    <div class="center">
+                    <i class="bi bi-chevron-double-right" style="font-size: 4.1em;"></i>
+                    <br>
+                        <h5>Submit to search for articles. <br> Built in functionality to filter based on keywords</h5>
+                    </div>
+                </div>
 
-<div class="section" id="new_section">
-    <div class="move">
-      <div class="row">
-        <div class="col s4">
-            <div class="center">
-              <i class="bi bi-pen-fill" style="font-size: 4.1em;"></i>
-              <br>
-                <p>Paste the text of the article <br> The power to form your own informed perspective </p>
-                <!-- <p class="light center"> Cross-reference with reputable sources</p> -->
+                <div class="col s4">
+                    <div class="center">
+                    <i class="bi bi-book-half" style="font-size: 4.1em;"></i>
+                    <br>
+                        <h5>Browse relevent results <br> The power to form your own informed perspective </h5>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="col s4">
-            <div class="center">
-              <i class="bi bi-chevron-double-right" style="font-size: 4.1em;"></i>
-              <br>
-                <p>Submit to serach for articles. <br> Built in functionality to filter based on keywords</p>
-                <!-- <p class="light center">Built in functionality to filter based on keywords</p> -->
+            <br>
+            <br>
+        
+            <div class="grid-item">
+            <textarea class="form-control" type="text" id='input'></textarea>
+            <br>
+                <div>
+                    <button type="submit" class="buttons btn btn-outline-dark btn-lg" onclick= "processSelected()" id='testing'>Escape Your Rabbit Hole!</button>
+                </div>
             </div>
-        </div>
 
-        <div class="col s4">
-            <div class="center">
-              <i class="bi bi-book-half" style="font-size: 4.1em;"></i>
-              <br>
-                <p>Browse relevent results <br> The power to form your own informed perspective </p>
-                <!-- <p class="light center">The power to form your own informed perspective</p> -->
+            <div class="a">
+              <img id="rabbit2" src="images/rabbit_hole.png" alt="LOGO1">
             </div>
+
+          
         </div>
-    </div>
-    
-
-    <textarea class="form-control" type="text" id='input'></textarea>
-    <div id="buttons">
-    <button type="submit" class="btn btn-outline-dark btn-lg" onclick= "processSelected()" id='testing'>Escape Your Rabbit Hole!</button>
-    </div>
-    </div>
-  </div>
-
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+        </div>
 </div>
 
 
-    
 
 
+<div class='results-container'>
+    <div id="logos" class="results-item">
+    </div>
+    <div id='content' class="results-item">
+        <script id="theamericanconservative"></script>
+        <script id="washingtontimes"></script>
+        <script id="foxnews"></script>
+        <script id="breitbart"></script>
+        <script id="nationalreview"></script>
+        <script id="bloomberg"></script>
+        <script id="nbc"></script>
+        <script id="cnn"></script>
+        <script id="theguardian"></script>
+        <script id="nytimes"></script>
+    </div>
+</div>
 
-
-
-    <div id="content"></div>
-      
+<!--       
     <script id="bloomberg"></script>
     <script id="nbc"></script>
     <script id="cnn"></script>
@@ -115,7 +134,7 @@
     <script id="washingtontimes"></script>
     <script id="foxnews"></script>
     <script id="breitbart"></script>
-    <script id="nationalreview"></script>
+    <script id="nationalreview"></script> -->
     
     <script type="text/javascript" src="googleapi.js"></script>
     <script type="text/javascript" src="master.js"></script>

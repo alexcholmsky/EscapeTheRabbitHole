@@ -3,13 +3,14 @@
   src: url('../resources/bold.otf');
 }
 
-@font-face {
-font-family: 'kayak';
-src: url('../resources/Kayak Sans Light.otf');
-}
 /*
 * Globals
 */
+
+body{
+  font-family: 'MyWebFont';
+  letter-spacing: 0.5px;
+}
 
 /* Custom default button */
 .btn-secondary,
@@ -42,7 +43,7 @@ max-width: 100em;
 
 #text{
 position: absolute;
-top: 47.5%;
+top: 35%;
 left: 50%;
 transform: translate(-50%, -50%);
 font-family: 'MyWebFont';
@@ -116,19 +117,6 @@ animation: fadeThird 3.4s;
 100% {opacity:1;}
 }
 
-.fourth{
-animation: fadeThird 3.6s;
--webkit-animation: fadeThird 3.6s;
--moz-animation: fadeThird 3.6s;
--o-animation: fadeThird 3.6s;
--ms-animation: fadeThird 3.6s;
-}
-@keyframes fadeThird {
-0% {opacity:0;}
-66% {opacity:0;}
-100% {opacity:1;}
-}
-
 .nav-masthead .nav-link {
 font-family: 'kayak';
 letter-spacing: 2.5px;
@@ -164,22 +152,21 @@ width: 3vw;
 height: 2vw;
 color: black;
 
-animation: arrow 2.25s;
--webkit-animation: fade 2.25s;
--moz-animation: fade 2.25s;
--o-animation: fade 2.25s;
--ms-animation: fade 2.25s;
+animation: arrow 3s;
+-webkit-animation: fade 3s;
+-moz-animation: fade 3s;
+-o-animation: fade 3s;
+-ms-animation: fade 3s;
 }
 @keyframes fade {
 0% {opacity:0;}
 50% {opacity:0;}
 100% {opacity:1;}
-
 }
 
 .jump {
   position: absolute;
-  top: 94.5%;
+  top: 96.25%;
   left: 50%;
   animation: arrow 2s linear infinite;
 }
@@ -217,11 +204,11 @@ button.current {
 
   }
 
-  body {
-    min-width: 350px;
-    max-width: 100%;
-    min-height: 500px;
-    max-height: 100%;
+body {
+  min-width: 350px;
+  max-width: 100%;
+  min-height: 500px;
+  max-height: 100%;
 }
 
 .icon {
@@ -240,20 +227,68 @@ textarea {
   align-items: center;
 }
 
-.jump {
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  padding: 0px;
+}
+.grid-item {
+ height: 10vh;
+
+}
+
+.results-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  
+}
+.results-item {
+ height: 20vh;
+ width: 80vw;
+ padding-right: 100px;
+ 
+
+
+}
+
+#rabbit{
   position: absolute;
-  top: 94.5%;
+  top: 77.25%;
   left: 50%;
-  animation: arrow 2s linear infinite;
+  transform: translate(-50%, -50%);
 }
-@keyframes arrow{
-0%{
-  transform: translateY(-5px);
+
+div.a{
+  position: absolute;
+  top: 140%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  -ms-transform: rotate(90deg); /* IE 9 */
+  transform: rotate(90deg);
+  z-index: -3;
 }
-50%{
-  transform: translateY(5px);
+
+.buttons {
+  position: absolute;
+  text-align: center;
+  left: 42.92vw;
 }
-100%{
-  transform: translateY(-5px);
+
+#input {
+  height: 15vh;
 }
+
+#logos{
+  width:10vh;
+  height:100%;
+}
+
+#content {
+  font-size: 17.25px;
+  padding-top: 10px;
+  padding-left: 60px;
+}
+
+#1{
+  height:100vh;
 }
